@@ -3,23 +3,32 @@ Welcome to Guardian - A Python-based vulnerability scanner focused on Apache ver
 Features
 
 •	Identifies open ports using Nmap. 
+
 •	Detects Apache web servers and extracts version information from banners. 
+
 •	Queries the NVD for known CVEs affecting discovered Apache versions. 
+
 •	Filters vulnerabilities based on a configurable minimum CVSS score. 
+
 •	Generates reports in HTML or JSON formats.
 
 Installation
 **Prerequisites** 
 
 •	Python 3.11.6 or later 
+
 •	Nmap (https://nmap.org/) 
 
 **Installing Dependencies**
--	pip install requests 
--	pip install python-nmap 
--	pip install ratelimit 
+
+-	pip install requests
+	
+-	pip install python-nmap
+  
+-	pip install ratelimit
+  
 -	pip install argparse
--	
+  
 **Clone the Repository**
  	
 git clone https://github.com/3N16MV/Guardian.git
@@ -39,9 +48,13 @@ python main.py example.com --ports 80 443 --min-cvss 8.0 --output-format HTML
 Arguments
 
 •	target (required): The hostname or IP address to scan. 
+
 •	--ports (optional): A space-separated list of ports to scan. Defaults to 21, 22, 80, 443. 
-•	--min-cvss (optional): The minimum CVSS score for vulnerabilities to include in the report. Defaults to 7.0. 
+
+•	--min-cvss (optional): The minimum CVSS score for vulnerabilities to include in the report. Defaults to 7.0.
+
 •	--output-format (optional): The output format, either 'json' or 'html'. Defaults to 'json'. 
+
 •	--nmap-args (optional): Additional arguments to be passed directly to the Nmap scan (e.g., "-sS" for SYN scan). Defaults to "-sV".Contribution
 
 Reports
